@@ -57,6 +57,10 @@ public class GameScript : MonoBehaviour
 
     /* Set player boundaries */
     private void SetBoundaries(){
-        player.transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, minX, maxX), player.transform.position.y, player.transform.position.z);
+        if (player.transform.position.x < minX)
+            player.transform.position = new Vector3(maxX, player.transform.position.y, player.transform.position.z);
+        if (player.transform.position.x > maxX)
+            player.transform.position = new Vector3(minX, player.transform.position.y, player.transform.position.z);
+        
     }
 }
