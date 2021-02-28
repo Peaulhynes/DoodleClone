@@ -16,21 +16,14 @@ public class DeathScript : MonoBehaviour
     /* Move DeathLimits with player */
     private void Update() 
     {
-        
         if (player.transform.position.y > transform.position.y + range)
-        {
             transform.position = new Vector3(transform.position.x, player.transform.position.y - range, transform.position.z);
-        }
-        
     }
 
     /* Player collides with DeathLimits and die */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject == player)
-        {
             player.GetComponent<PlayerScript>().Death();
-        }
     }
 }
