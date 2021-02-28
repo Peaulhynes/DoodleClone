@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour
 {
-
     public float bounce = 10f;
     void OnCollisionEnter2D(Collision2D collision) 
     {
@@ -14,9 +13,7 @@ public class PlatformScript : MonoBehaviour
             Rigidbody2D body = collision.collider.GetComponent<Rigidbody2D>();
             if (body != null)
             {    
-                Vector2 velocity = body.velocity;
-                velocity.y = bounce;
-                body.velocity = velocity;
+                body.velocity = new Vector2(body.velocity.x, bounce);
             }
         }
     }
