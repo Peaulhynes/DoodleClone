@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float movement = 0f;
     public float speed = 10f;
+    public float range = 7f;
     public Rigidbody2D body;
     private float topScore = 0.0f;
     public Text scoreText;

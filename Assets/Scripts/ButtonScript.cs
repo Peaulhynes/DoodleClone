@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class ButtonScript : MonoBehaviour
 {
 
+    /* Play Button */
     public void StartGame()
     {
         SceneManager.LoadScene("MainScene");
     }
 
+    /* Menu Button */
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
